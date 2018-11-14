@@ -10,7 +10,14 @@ import UIKit
 
 class storeProductViewController: UIViewController {
 
+    var focusProduct : Product = Product(_productID: "1", _productName: "CHILI", _picture: "CHILI-MAC-lipstick", _description: "chilichilichili", _capacity: 2, _price: 12.2)
+    
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var focusProductImageView: UIImageView!
+    @IBOutlet weak var focusProductNameLabel: UILabel!
+    @IBOutlet weak var focusProductDescriptionLabel: UILabel!
+    @IBOutlet weak var focusProductPriceLabel: UILabel!
+    
     var products : [Product] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +25,11 @@ class storeProductViewController: UIViewController {
         tableView.dataSource = self
         // Do any additional setup after loading the view.
         products = fetchProducts()
+        
+        focusProductImageView.image = focusProduct.picture
+        focusProductNameLabel.text = focusProduct.productName
+        focusProductDescriptionLabel.text = focusProduct.description
+        focusProductPriceLabel.text = "\(focusProduct.capacity) oz. $\(focusProduct.price)"
     }
     
 

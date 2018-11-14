@@ -34,7 +34,6 @@ class navMainViewController: UIViewController {
         configureLocationServices()
         mapView.delegate = self
         
-        //Writing the subview
         focusProductImageView.image = focusProduct.picture
         focusProductNameLabel.text = focusProduct.productName
         focusProductDescriptionLabel.text = focusProduct.description
