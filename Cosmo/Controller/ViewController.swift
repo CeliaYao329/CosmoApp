@@ -11,18 +11,25 @@ import MapKit
 
 class ViewController: UIViewController {
     
+    var products : [Product] = []
     private let locationManager = CLLocationManager()
     private var currentLocation: CLLocationCoordinate2D?
     
     private var destinations : [MKPointAnnotation] = []
     private var currentRoute : MKRoute?
     
+    @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var mapView: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        collectionView.delegate = self
+        collectionView.dataSource = self
         configureLocationServices()
         mapView.delegate = self
+        
+        products = fetchProducts()
     }
     
     private func configureLocationServices(){
@@ -90,9 +97,6 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func buttonPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "gotoStoreProductView", sender: nil)
-    }
     
     
 }
@@ -165,6 +169,37 @@ extension ViewController: MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         print("select annotation: \(String(describing: view.annotation?.title))")
     }
+    
+    func fetchProducts() -> [Product]{
+        var products : [Product] = []
+        let product1 = Product(_productID: "1", _productName: "CHILI", _picture: "CHILI-MAC-lipstick", _description: "chilichilichili", _capacity: 2, _price: 12.2)
+        let product2 = Product(_productID: "2", _productName: "Free", _picture: "Free-MAC-lipstick", _description: "freeme!!!!!", _capacity: 2, _price: 19.1)
+        let product3 = Product(_productID: "3", _productName: "Mediumrare", _picture: "Mediumrare-MAC-lipstick", _description: "medmedmedmsmhgjb", _capacity: 2, _price: 10.2)
+        products.append(product1)
+        products.append(product2)
+        products.append(product3)
+        
+        return products
+    }
 }
 
 
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("UICollectionView numberOfItemsInSection called")
+        print(products.count)
+
+        return products.count
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print("create horizontal Cell")
+        let cellProduct = products[indexPath.row]
+        let hCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductHorizontalCell", for: indexPath) as! productHorizontalCollectionViewCell
+        hCell.setProductHorizontalCell(curProduct: cellProduct)//configure the cell
+        print("construct cell: \(cellProduct.productName)")
+        return hCell
+    }
+    
+}
