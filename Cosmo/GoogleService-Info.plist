@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>196356066254-ojae2gpt7efh239bqcg5armoshn09rnc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.196356066254-ojae2gpt7efh239bqcg5armoshn09rnc</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBH2W7u07wy4gIA76zE70T-0EzSt_ZvEsU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>196356066254</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.siyuyao.Cosmo</string>
+	<key>PROJECT_ID</key>
+	<string>cosmo-50b96</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cosmo-50b96.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:196356066254:ios:18bce8c41c6f9bea</string>
+	<key>DATABASE_URL</key>
+	<string>https://cosmo-50b96.firebaseio.com</string>
+</dict>
+</plist>

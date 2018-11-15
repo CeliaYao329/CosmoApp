@@ -27,6 +27,7 @@
 		7B45501F219DFD77002BC918 /* fillReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45501E219DFD77002BC918 /* fillReviewViewController.swift */; };
 		7B455023219E15A2002BC918 /* myBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B455022219E15A2002BC918 /* myBagViewController.swift */; };
 		7B455025219E165F002BC918 /* BagProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B455024219E165F002BC918 /* BagProductTableViewCell.swift */; };
+		7BBB1879219E20CE00E3EE02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7BBB1878219E20CE00E3EE02 /* GoogleService-Info.plist */; };
 		B9D06CDAAF5049B8D35ACC02 /* Pods_Cosmo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0CF4516E5398A336E540571 /* Pods_Cosmo.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		7B45501E219DFD77002BC918 /* fillReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fillReviewViewController.swift; sourceTree = "<group>"; };
 		7B455022219E15A2002BC918 /* myBagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myBagViewController.swift; sourceTree = "<group>"; };
 		7B455024219E165F002BC918 /* BagProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagProductTableViewCell.swift; sourceTree = "<group>"; };
+		7BBB1878219E20CE00E3EE02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AA5F7798546780947F6F9052 /* Pods-Cosmo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cosmo/Pods-Cosmo.debug.xcconfig"; sourceTree = "<group>"; };
 		E0CF4516E5398A336E540571 /* Pods_Cosmo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cosmo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E92812BA70493D886CB0CD13 /* Pods-Cosmo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cosmo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cosmo/Pods-Cosmo.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				7B454FF1219C0BFF002BC918 /* AppDelegate.swift */,
 				7B454FF8219C0C01002BC918 /* Assets.xcassets */,
 				7B454FFD219C0C01002BC918 /* Info.plist */,
+				7BBB1878219E20CE00E3EE02 /* GoogleService-Info.plist */,
 			);
 			path = Cosmo;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B454FFC219C0C01002BC918 /* LaunchScreen.storyboard in Resources */,
+				7BBB1879219E20CE00E3EE02 /* GoogleService-Info.plist in Resources */,
 				7B454FF9219C0C01002BC918 /* Assets.xcassets in Resources */,
 				7B454FF7219C0BFF002BC918 /* Main.storyboard in Resources */,
 			);
