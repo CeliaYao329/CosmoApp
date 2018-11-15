@@ -16,6 +16,9 @@ class Product{
     var description: String
     var capacity: Int
     var price: Float
+    var tags : [String] = ["Super moist", "Too expensize", "nice color", "restock", "Dry Skin", "winter", "Gift choice"]
+    var reviews : [Review] = []
+    
     
     init(_productID: String, _productName: String, _picture: String, _description: String, _capacity: Int, _price : Float){
         productID = _productID

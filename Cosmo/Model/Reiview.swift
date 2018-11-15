@@ -9,6 +9,7 @@
 import Foundation
 
 class Review{
+    var reviewer: User?
     var product: Product?
     var rate: Float?
     var tags: [String] = []

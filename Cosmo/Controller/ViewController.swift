@@ -200,6 +200,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         print("construct cell: \(cellProduct.productName)")
         return hCell
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         performSegue(withIdentifier: "fromMainToProductDetail", sender: self)
     }

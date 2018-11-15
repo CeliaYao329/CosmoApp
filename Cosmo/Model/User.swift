@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 
 class User{
-    var userId: String?
-    var userName: String?
+    var userId: String = "fakeuserid"
+    var userName: String = "fakeusername"
     var wishingList : [Product] = [Product]()
     var recommendedList: [Product] = [Product]()
     //var reviewList : [Review] = [Review]()
-    var longitude: Double?
-    var latitude: Double?
-    var portrait: String?
-    var QRCode: UIImage?
+    var longitude: Double = -73.978570
+    var latitude: Double = 40.756670
+    var portrait: String = "Portrait"
+    var QRCode: UIImage = UIImage(named:"QRCode")!
 }

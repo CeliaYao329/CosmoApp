@@ -21,6 +21,8 @@
 		7B455013219CB190002BC918 /* navMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B455012219CB190002BC918 /* navMainViewController.swift */; };
 		7B455015219CDFDB002BC918 /* Reiview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B455014219CDFDB002BC918 /* Reiview.swift */; };
 		7B455017219CE6C1002BC918 /* productDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B455016219CE6C1002BC918 /* productDetailViewController.swift */; };
+		7B455019219D25A1002BC918 /* ReviewDisplayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B455018219D25A1002BC918 /* ReviewDisplayTableViewCell.swift */; };
+		7B45501B219D382D002BC918 /* tagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45501A219D382D002BC918 /* tagCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		7B455012219CB190002BC918 /* navMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navMainViewController.swift; sourceTree = "<group>"; };
 		7B455014219CDFDB002BC918 /* Reiview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reiview.swift; sourceTree = "<group>"; };
 		7B455016219CE6C1002BC918 /* productDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productDetailViewController.swift; sourceTree = "<group>"; };
+		7B455018219D25A1002BC918 /* ReviewDisplayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDisplayTableViewCell.swift; sourceTree = "<group>"; };
+		7B45501A219D382D002BC918 /* tagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tagCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 				7B454FFA219C0C01002BC918 /* LaunchScreen.storyboard */,
 				7B455009219C0FA1002BC918 /* ProductTableViewCell.swift */,
 				7B45500D219C8AFF002BC918 /* productHorizontalCollectionViewCell.swift */,
+				7B455018219D25A1002BC918 /* ReviewDisplayTableViewCell.swift */,
+				7B45501A219D382D002BC918 /* tagCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,12 +192,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B455019219D25A1002BC918 /* ReviewDisplayTableViewCell.swift in Sources */,
 				7B455008219C0DF8002BC918 /* Store.swift in Sources */,
 				7B454FF4219C0BFF002BC918 /* ViewController.swift in Sources */,
 				7B455006219C0DE0002BC918 /* Product.swift in Sources */,
 				7B455015219CDFDB002BC918 /* Reiview.swift in Sources */,
 				7B454FF2219C0BFF002BC918 /* AppDelegate.swift in Sources */,
 				7B45500C219C12C6002BC918 /* storeProductViewController.swift in Sources */,
+				7B45501B219D382D002BC918 /* tagCollectionViewCell.swift in Sources */,
 				7B455004219C0DCD002BC918 /* User.swift in Sources */,
 				7B455013219CB190002BC918 /* navMainViewController.swift in Sources */,
 				7B45500E219C8AFF002BC918 /* productHorizontalCollectionViewCell.swift in Sources */,
