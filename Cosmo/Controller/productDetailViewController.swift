@@ -30,6 +30,7 @@ class productDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        createReviewsAndTags()
         
         // Do any additional setup after loading the view.
         collectionView.delegate = self

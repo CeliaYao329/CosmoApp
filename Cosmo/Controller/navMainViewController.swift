@@ -18,10 +18,9 @@ class navMainViewController: UIViewController {
     
     private var destinations : [MKPointAnnotation] = []
     private var currentRoute : MKRoute?
-    
+    @IBOutlet weak var focusProductNameLabel: UILabel!
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var focusProductImageView: UIImageView!
-    @IBOutlet weak var focusProductNameLabel: UILabel!
     @IBOutlet weak var focusProductDescriptionLabel: UILabel!
     @IBOutlet weak var focusProductPriceLabel: UILabel!
     
@@ -106,7 +105,7 @@ class navMainViewController: UIViewController {
     }
     
     @IBAction func gotoStoreProductView(_ sender: Any) {
-        performSegue(withIdentifier: "fromNavMainToStoreProduct", sender: nil)
+        performSegue(withIdentifier: "fromNavMainToQRCodeView", sender: nil)
     }
     
     /*

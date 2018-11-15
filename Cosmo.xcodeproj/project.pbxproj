@@ -23,6 +23,7 @@
 		7B455017219CE6C1002BC918 /* productDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B455016219CE6C1002BC918 /* productDetailViewController.swift */; };
 		7B455019219D25A1002BC918 /* ReviewDisplayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B455018219D25A1002BC918 /* ReviewDisplayTableViewCell.swift */; };
 		7B45501B219D382D002BC918 /* tagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45501A219D382D002BC918 /* tagCollectionViewCell.swift */; };
+		7B45501D219D5815002BC918 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45501C219D5815002BC918 /* QRCodeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		7B455016219CE6C1002BC918 /* productDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productDetailViewController.swift; sourceTree = "<group>"; };
 		7B455018219D25A1002BC918 /* ReviewDisplayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewDisplayTableViewCell.swift; sourceTree = "<group>"; };
 		7B45501A219D382D002BC918 /* tagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tagCollectionViewCell.swift; sourceTree = "<group>"; };
+		7B45501C219D5815002BC918 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				7B454FF3219C0BFF002BC918 /* ViewController.swift */,
 				7B455012219CB190002BC918 /* navMainViewController.swift */,
 				7B455016219CE6C1002BC918 /* productDetailViewController.swift */,
+				7B45501C219D5815002BC918 /* QRCodeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				7B455013219CB190002BC918 /* navMainViewController.swift in Sources */,
 				7B45500E219C8AFF002BC918 /* productHorizontalCollectionViewCell.swift in Sources */,
 				7B45500A219C0FA1002BC918 /* ProductTableViewCell.swift in Sources */,
+				7B45501D219D5815002BC918 /* QRCodeViewController.swift in Sources */,
 				7B455017219CE6C1002BC918 /* productDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
