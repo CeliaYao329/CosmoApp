@@ -1,35 +1,27 @@
 //
-//  storeProductViewController.swift
+//  myBagViewController.swift
 //  Cosmo
 //
-//  Created by Siyu Yao on 11/14/18.
+//  Created by Siyu Yao on 11/15/18.
 //  Copyright © 2018 Siyu Yao. All rights reserved.
 //
 
 import UIKit
 
-class storeProductViewController: UIViewController {
+class myBagViewController: UIViewController {
+    
 
-    var focusProduct : Product = Product(_productID: "1", _productName: "CHILI", _picture: "CHILI-MAC-lipstick", _description: "chilichilichili", _capacity: 2, _price: 12.2)
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var focusProductImageView: UIImageView!
-    @IBOutlet weak var focusProductNameLabel: UILabel!
-    @IBOutlet weak var focusProductDescriptionLabel: UILabel!
-    @IBOutlet weak var focusProductPriceLabel: UILabel!
     
-    var products : [Product] = []
+    @IBOutlet weak var bagProductTableView: UITableView!
+    var bagProducts : [Product] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+        bagProducts = fetchProducts()
         // Do any additional setup after loading the view.
-        products = fetchProducts()
-        
-        focusProductImageView.image = focusProduct.picture
-        focusProductNameLabel.text = focusProduct.productName
-        focusProductDescriptionLabel.text = focusProduct.description
-        focusProductPriceLabel.text = "\(focusProduct.capacity) oz. $\(focusProduct.price)"
+        bagProductTableView.delegate = self
+        bagProductTableView.dataSource = self
     }
     
 
@@ -42,7 +34,6 @@ class storeProductViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
     func fetchProducts() -> [Product]{
         var products : [Product] = []
         let product1 = Product(_productID: "1", _productName: "CHILI", _picture: "CHILI-MAC-lipstick", _description: "chilichilichili", _capacity: 2, _price: 12.2)
@@ -54,19 +45,15 @@ class storeProductViewController: UIViewController {
         
         return products
     }
-    @IBAction func editReviewPressed(_ sender: Any) {
-        performSegue(withIdentifier: "fromStoreProductToFillReview", sender: self)
-    }
 }
 
-extension storeProductViewController: UITableViewDataSource, UITableViewDelegate{
+extension myBagViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return products.count
+        return bagProducts.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellProduct = products[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell") as! ProductTableViewCell
+        let cellProduct = bagProducts[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BagProductCell") as! BagProductTableViewCell
         cell.setProductCell(curProduct: cellProduct)//configure the cell
         return cell
     }
