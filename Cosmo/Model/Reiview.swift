@@ -9,5 +9,9 @@
 import Foundation
 
 class Review{
-    
+    var product: Product?
+    var rate: Float?
+    var tags: [String] = []
+    var note: String?
+    var timestamp: Date?
 }

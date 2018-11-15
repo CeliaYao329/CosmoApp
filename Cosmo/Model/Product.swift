@@ -25,4 +25,12 @@ class Product{
         capacity = _capacity
         price = _price
     }
+    init(){
+        productName = ""
+        productID = ""
+        picture = UIImage(named: "default")!
+        description = ""
+        capacity = 0
+        price = 0
+    }
 }

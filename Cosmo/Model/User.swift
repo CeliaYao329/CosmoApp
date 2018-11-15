@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class User{
     var userId: String?
@@ -17,4 +18,5 @@ class User{
     var longitude: Double?
     var latitude: Double?
     var portrait: String?
+    var QRCode: UIImage?
 }

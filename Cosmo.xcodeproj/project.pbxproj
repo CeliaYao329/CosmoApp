@@ -20,6 +20,7 @@
 		7B45500E219C8AFF002BC918 /* productHorizontalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45500D219C8AFF002BC918 /* productHorizontalCollectionViewCell.swift */; };
 		7B455013219CB190002BC918 /* navMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B455012219CB190002BC918 /* navMainViewController.swift */; };
 		7B455015219CDFDB002BC918 /* Reiview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B455014219CDFDB002BC918 /* Reiview.swift */; };
+		7B455017219CE6C1002BC918 /* productDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B455016219CE6C1002BC918 /* productDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		7B45500D219C8AFF002BC918 /* productHorizontalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productHorizontalCollectionViewCell.swift; sourceTree = "<group>"; };
 		7B455012219CB190002BC918 /* navMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navMainViewController.swift; sourceTree = "<group>"; };
 		7B455014219CDFDB002BC918 /* Reiview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reiview.swift; sourceTree = "<group>"; };
+		7B455016219CE6C1002BC918 /* productDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				7B45500B219C12C6002BC918 /* storeProductViewController.swift */,
 				7B454FF3219C0BFF002BC918 /* ViewController.swift */,
 				7B455012219CB190002BC918 /* navMainViewController.swift */,
+				7B455016219CE6C1002BC918 /* productDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				7B455013219CB190002BC918 /* navMainViewController.swift in Sources */,
 				7B45500E219C8AFF002BC918 /* productHorizontalCollectionViewCell.swift in Sources */,
 				7B45500A219C0FA1002BC918 /* ProductTableViewCell.swift in Sources */,
+				7B455017219CE6C1002BC918 /* productDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -111,26 +111,55 @@
                     <connections>
                         <outlet property="collectionView" destination="k1g-yj-wlT" id="AXJ-Oa-MfY"/>
                         <outlet property="mapView" destination="2wG-Of-yuG" id="Ypa-id-m2q"/>
+                        <segue destination="9br-zu-AcL" kind="show" identifier="fromMainToProductDetail" id="hIp-aB-J6B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="660.86956521739137" y="133.25892857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Product Detail View Controller-->
         <scene sceneID="wvR-IN-zi2">
             <objects>
-                <viewController id="9br-zu-AcL" sceneMemberID="viewController">
+                <viewController id="9br-zu-AcL" customClass="productDetailViewController" customModule="Cosmo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BEu-NS-iZH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgN-L1-ItG">
+                                <rect key="frame" x="0.0" y="88" width="414" height="1112"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zpj-BJ-I4L">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                                        <color key="backgroundColor" red="0.15686274510000001" green="0.66666666669999997" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1200" id="WTz-sa-Zb2"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Zpj-BJ-I4L" secondAttribute="bottom" id="3jM-4y-U0l"/>
+                                    <constraint firstItem="Zpj-BJ-I4L" firstAttribute="leading" secondItem="kgN-L1-ItG" secondAttribute="leading" id="9U4-AW-WL5"/>
+                                    <constraint firstItem="Zpj-BJ-I4L" firstAttribute="top" secondItem="kgN-L1-ItG" secondAttribute="top" id="Nue-DV-szb"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zpj-BJ-I4L" secondAttribute="trailing" id="gnZ-oN-sE5"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kgN-L1-ItG" firstAttribute="leading" secondItem="M3h-Hw-NV1" secondAttribute="leading" id="6PN-0a-JZG"/>
+                            <constraint firstAttribute="bottom" secondItem="kgN-L1-ItG" secondAttribute="bottom" id="I3M-yj-POz"/>
+                            <constraint firstItem="kgN-L1-ItG" firstAttribute="top" secondItem="M3h-Hw-NV1" secondAttribute="top" id="a1X-Za-0bZ"/>
+                            <constraint firstItem="Zpj-BJ-I4L" firstAttribute="width" secondItem="BEu-NS-iZH" secondAttribute="width" id="mqK-XR-4HQ"/>
+                            <constraint firstItem="kgN-L1-ItG" firstAttribute="trailing" secondItem="M3h-Hw-NV1" secondAttribute="trailing" id="wQH-ZM-h5E"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="M3h-Hw-NV1"/>
                     </view>
+                    <size key="freeformSize" width="414" height="1200"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="irS-R7-KIt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1421" y="130"/>
+            <point key="canvasLocation" x="1618.840579710145" y="-154.01785714285714"/>
         </scene>
         <!--Nav Main View Controller-->
         <scene sceneID="TOw-fZ-wf8">
@@ -203,17 +232,54 @@
                         <outlet property="focusProductNameLabel" destination="Aox-Jn-cDo" id="Htz-z9-eb5"/>
                         <outlet property="focusProductPriceLabel" destination="56g-gZ-tyY" id="1mg-V9-vgk"/>
                         <outlet property="mapView" destination="QFk-kQ-eiD" id="fQL-nB-f5x"/>
-                        <segue destination="FWF-3F-sm0" kind="show" identifier="fromNavMainToStoreProduct" id="2ET-FM-rRS"/>
+                        <segue destination="qOg-3S-h48" kind="show" identifier="fromNavMainToQRCodeView" id="cGA-vg-BcK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddv-EB-NyC" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="D2E-qA-Ddk">
                     <connections>
-                        <segue destination="9br-zu-AcL" kind="show" identifier="fromMavMainToProductDetail" id="8zi-v1-UrV"/>
+                        <segue destination="9br-zu-AcL" kind="show" identifier="fromNavMainToProductDetail" id="8zi-v1-UrV"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="659.4202898550725" y="798.21428571428567"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="H1r-0z-88U">
+            <objects>
+                <viewController id="qOg-3S-h48" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UT9-eZ-Ybu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yO-KK-0Yx">
+                                <rect key="frame" x="87" y="293" width="240" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="b2k-LG-swa" appends="YES" id="fYl-ey-Wp9"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QRCode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LB3-Ey-qmU">
+                                <rect key="frame" x="175" y="555" width="65" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vRN-mE-Z6c"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="seZ-IG-yUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="b2k-LG-swa">
+                    <connections>
+                        <segue destination="FWF-3F-sm0" kind="show" identifier="fromQRCodeToStoreProductView" id="U88-E8-R8w"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1418.840579710145" y="797.54464285714278"/>
         </scene>
         <!--Store Product View Controller-->
         <scene sceneID="3DU-U7-WtV">
@@ -332,7 +398,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cce-Ay-ube" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1418.840579710145" y="797.54464285714278"/>
+            <point key="canvasLocation" x="2178" y="798"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wF1-l3-QZ5">
@@ -353,4 +419,7 @@
             <point key="canvasLocation" x="-102" y="134"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hIp-aB-J6B"/>
+    </inferredMetricsTieBreakers>
 </document>

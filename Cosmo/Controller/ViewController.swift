@@ -188,7 +188,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print("UICollectionView numberOfItemsInSection called")
         print(products.count)
-
         return products.count
         
     }
@@ -201,5 +200,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         print("construct cell: \(cellProduct.productName)")
         return hCell
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "fromMainToProductDetail", sender: self)
+    }
 }
