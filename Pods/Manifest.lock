@@ -49,10 +49,12 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - TagListView (1.3.2)
 
 DEPENDENCIES:
   - Cosmos
   - Firebase/Core
+  - TagListView (~> 1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -64,6 +66,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUtilities
     - nanopb
+    - TagListView
 
 SPEC CHECKSUMS:
   Cosmos: 309e489f21ffc91a1eeecfebef7f817cd2fcfba6
@@ -74,7 +77,8 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 5029d78f2b438bd30ffb44e6c558b57c21622727
   GoogleUtilities: abb092d2c12e817fa3e0e7b274987dd72fb86ec3
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  TagListView: 0c7e9c26b9aff858224ee6b155f5fcacd9e27c83
 
-PODFILE CHECKSUM: 062e4661965ce43e4f634ce520ce50e950947359
+PODFILE CHECKSUM: a6b45d2408a1aca3f3c3813cc7e9aa316a0234e8
 
 COCOAPODS: 1.5.3

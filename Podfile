@@ -8,5 +8,6 @@ target 'Cosmo' do
   # Pods for Cosmo
     pod 'Cosmos'
     pod 'Firebase/Core'
+    pod 'TagListView', '~> 1.0'
 
 end

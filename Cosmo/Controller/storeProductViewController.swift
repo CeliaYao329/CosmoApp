@@ -55,7 +55,7 @@ class storeProductViewController: UIViewController {
         return products
     }
     @IBAction func editReviewPressed(_ sender: Any) {
-        performSegue(withIdentifier: "fromStoreProductToFillReview", sender: self)
+        performSegue(withIdentifier: "fromStoreProductToFillReview", sender: nil)
     }
 }
 

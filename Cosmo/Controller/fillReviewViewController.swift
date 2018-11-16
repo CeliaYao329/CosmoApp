@@ -11,6 +11,7 @@ import Cosmos
 
 class fillReviewViewController: UIViewController {
     
+    var reviewProduct : Product = Product(_productID: "1", _productName: "CHILI", _picture: "CHILI-MAC-lipstick", _description: "chilichilichili", _capacity: 2, _price: 12.2)
     
     @IBOutlet weak var fillReviewProductImage: UIImageView!
     @IBOutlet weak var fillReviewProductName: UILabel!
@@ -21,6 +22,7 @@ class fillReviewViewController: UIViewController {
     @IBOutlet weak var rateSubview: UIView!
     
     @IBOutlet weak var fillTagCollectionView: UICollectionView!
+
     
     lazy var rateView: CosmosView = {
         var view = CosmosView()
@@ -30,6 +32,11 @@ class fillReviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         rateSubview.addSubview(rateView)
+        
+        fillReviewProductImage.image = reviewProduct.picture
+        fillReviewProductName.text = reviewProduct.productName
+        fillReviewProductDescription.text = reviewProduct.description
+        fillReviewProductPrice.text = "\(reviewProduct.capacity) oz. $\(reviewProduct.price)"
         
         // Do any additional setup after loading the view.
     }
