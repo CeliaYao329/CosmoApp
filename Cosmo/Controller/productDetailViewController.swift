@@ -89,10 +89,10 @@ extension productDetailViewController : UICollectionViewDelegate, UICollectionVi
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         let width = UIScreen.main.bounds.width
         
-        layout.sectionInset = UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 10)
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 5)
         layout.itemSize = CGSize(width: width / 3 - 5, height: width / 10)
         layout.minimumInteritemSpacing = 2
-        layout.minimumLineSpacing = 8
+        layout.minimumLineSpacing = 5
         collectionView.collectionViewLayout = layout
         
         //cell layout
