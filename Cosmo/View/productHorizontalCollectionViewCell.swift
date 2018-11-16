@@ -21,9 +21,9 @@ class productHorizontalCollectionViewCell: UICollectionViewCell {
         productDescriptionLabel.text = curProduct.description
         productPriceLabel.text = "\(curProduct.capacity) oz. $\(curProduct.price)"
         
-        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowColor = UIColor.lightGray.cgColor
         self.layer.shadowOpacity = 0.4
-        self.layer.shadowOffset = CGSize(width: 6.0, height: 10.0)
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         self.layer.shouldRasterize = true
         self.clipsToBounds = false
     }

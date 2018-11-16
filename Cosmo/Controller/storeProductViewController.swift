@@ -18,6 +18,10 @@ class storeProductViewController: UIViewController {
     @IBOutlet weak var focusProductDescriptionLabel: UILabel!
     @IBOutlet weak var focusProductPriceLabel: UILabel!
     
+    @IBOutlet weak var shadowLayer: UIView!
+    
+//    @IBOutlet weak var cellShadowLayer: UIView!
+    
     var products : [Product] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +29,13 @@ class storeProductViewController: UIViewController {
         tableView.dataSource = self
         // Do any additional setup after loading the view.
         products = fetchProducts()
+        //shadow
+        shadowLayer.layer.shadowOpacity = 0.6
+        shadowLayer.layer.shadowColor = UIColor.lightGray.cgColor
+        shadowLayer.layer.shadowOffset = CGSize.zero
+        shadowLayer.layer.shadowPath = UIBezierPath(rect: shadowLayer.bounds).cgPath
         
+   
         focusProductImageView.image = focusProduct.picture
         focusProductNameLabel.text = focusProduct.productName
         focusProductDescriptionLabel.text = focusProduct.description
@@ -68,6 +78,7 @@ extension storeProductViewController: UITableViewDataSource, UITableViewDelegate
         let cellProduct = products[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell") as! ProductTableViewCell
         cell.setProductCell(curProduct: cellProduct)//configure the cell
+        
         return cell
     }
 }
