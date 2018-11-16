@@ -11,4 +11,10 @@ import UIKit
 class tagCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var tagLabel: UILabel!
+    func setUpProperties() {
+        self.layer.borderColor = UIColor.black.cgColor
+        self.layer.borderWidth = 2.0
+        self.layer.cornerRadius = 0
+        
+    }
 }
