@@ -53,11 +53,19 @@ class fillReviewViewController: UIViewController, TagListViewDelegate {
     }
     */
     func configureTags(){
-        tagList.textFont = UIFont.systemFont(ofSize: 24)
+        tagList.textFont = UIFont.systemFont(ofSize: 10)
         tagList.alignment = .center // possible values are .Left, .Center, and .Right
+        tagList.tagBackgroundColor = .white
+        tagList.textColor = .black
+        tagList.borderWidth = 1
+        tagList.paddingX = 25
+        tagList.paddingY = 20        
         
-        tagList.addTags(["Bold", "True", "Sheer","Shine", "Satin", "Matte","Dry","Creamy","Oily"])
-                
+        tagList.selectedTextColor = .white
+        tagList.tagSelectedBackgroundColor = .black
+        
+        tagList.addTags(["   Bold      ", "True", "Sheer","Shine", "Satin", "Matte","Dry","Creamy","Oily"])
+        
         tagList.setTitle("New Title", at:6) // to replace the title a tag
     }
 }
