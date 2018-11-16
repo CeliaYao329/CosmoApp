@@ -20,6 +20,27 @@ class ProductTableViewCell: UITableViewCell {
         productNameLabel.text = curProduct.productName
         productDescriptionLabel.text = curProduct.description
         productPriceLabel.text = "\(curProduct.capacity) oz. $\(curProduct.price)"
+        
+        //shadow
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.4
+        self.layer.shadowOffset = CGSize.zero
+        self.layer.shouldRasterize = true
+        self.clipsToBounds = false
+        
+        
+    }
+    
+    override var frame: CGRect {
+        get {
+            return super.frame
+        }
+        set (newFrame) {
+            var frame =  newFrame
+            frame.origin.y += 10
+            frame.size.height -= 4 * 5
+            super.frame = frame
+        }
     }
     
     override func awakeFromNib() {

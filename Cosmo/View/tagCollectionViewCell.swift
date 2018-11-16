@@ -15,5 +15,6 @@ class tagCollectionViewCell: UICollectionViewCell {
         self.layer.borderColor = UIColor.black.cgColor
         self.layer.borderWidth = 2.0
         self.layer.cornerRadius = 0
+        
     }
 }
