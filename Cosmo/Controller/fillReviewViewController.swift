@@ -22,6 +22,8 @@ class fillReviewViewController: UIViewController, TagListViewDelegate {
     @IBOutlet weak var rateSubview: UIView!
 
     @IBOutlet weak var tagList: TagListView!
+    @IBOutlet weak var tagList2: TagListView!
+    @IBOutlet weak var tagList3: TagListView!
     
     lazy var rateView: CosmosView = {
         var view = CosmosView()
@@ -32,6 +34,8 @@ class fillReviewViewController: UIViewController, TagListViewDelegate {
         super.viewDidLoad()
         rateSubview.addSubview(rateView)
         tagList.delegate = self
+        tagList2.delegate = self
+        tagList3.delegate = self
         
         fillReviewProductImage.image = reviewProduct.picture
         fillReviewProductName.text = reviewProduct.productName
@@ -54,18 +58,16 @@ class fillReviewViewController: UIViewController, TagListViewDelegate {
     */
     func configureTags(){
         tagList.textFont = UIFont.systemFont(ofSize: 10)
-        tagList.alignment = .center // possible values are .Left, .Center, and .Right
-        tagList.tagBackgroundColor = .white
-        tagList.textColor = .black
-        tagList.borderWidth = 1
-        tagList.paddingX = 25
-        tagList.paddingY = 20        
+        tagList.alignment = .center
+        tagList2.textFont = UIFont.systemFont(ofSize: 10)
+        tagList2.alignment = .center
+        tagList3.textFont = UIFont.systemFont(ofSize: 10)
+        tagList3.alignment = .center
         
-        tagList.selectedTextColor = .white
-        tagList.tagSelectedBackgroundColor = .black
+        tagList.addTags(["      Bold               ", "         True            ", "          Sheer          "])
+        tagList2.addTags(["      Shine              ", "         Satin           ", "          Matte          "])
+        tagList3.addTags(["        Dry              ", "         Creamy          ", "          Oily           "])
         
-        tagList.addTags(["   Bold      ", "True", "Sheer","Shine", "Satin", "Matte","Dry","Creamy","Oily"])
         
-        tagList.setTitle("New Title", at:6) // to replace the title a tag
     }
 }
