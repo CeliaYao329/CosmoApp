@@ -27,6 +27,7 @@ class productDetailViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var goTestButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,7 @@ class productDetailViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        goTestButton.layer.cornerRadius = 6.0
         
         displayProductView.image = displayProduct.picture
         displayProductNameLabel.text = displayProduct.productName

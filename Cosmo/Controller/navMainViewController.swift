@@ -11,7 +11,7 @@ import MapKit
 
 class navMainViewController: UIViewController {
 
-    var focusProduct : Product = Product(_productID: "1", _productName: "CHILI", _picture: "CHILI-MAC-lipstick", _description: "chilichilichili", _capacity: 2, _price: 12.2)
+    var focusProduct : Product = Product(_productID: "1", _productName: "CHILI LIPSTICK", _picture: "CHILI-MAC-lipstick", _description: "A concentrated loose colour powder", _capacity: 2, _price: 12.2)
     
     private let locationManager = CLLocationManager()
     private var currentLocation: CLLocationCoordinate2D?
@@ -23,6 +23,9 @@ class navMainViewController: UIViewController {
     @IBOutlet var focusProductImageView: UIImageView!
     @IBOutlet weak var focusProductDescriptionLabel: UILabel!
     @IBOutlet weak var focusProductPriceLabel: UILabel!
+    @IBOutlet weak var focusProductSubview: UIView!
+    
+    @IBOutlet weak var goTestButton: UIButton!
     
     
     
@@ -37,6 +40,13 @@ class navMainViewController: UIViewController {
         focusProductNameLabel.text = focusProduct.productName
         focusProductDescriptionLabel.text = focusProduct.description
         focusProductPriceLabel.text = "\(focusProduct.capacity) oz. $\(focusProduct.price)"
+        
+        focusProductSubview.layer.masksToBounds = false
+        focusProductSubview.layer.shadowColor = UIColor.lightGray.cgColor
+        focusProductSubview.layer.shadowOffset = CGSize(width: 0, height: 0)
+        focusProductSubview.layer.shadowOpacity = 0.8
+        
+        goTestButton.layer.cornerRadius = 6.0
     }
     
     private func configureLocationServices(){
@@ -68,11 +78,11 @@ class navMainViewController: UIViewController {
         targetStoreAnnotation.coordinate = CLLocationCoordinate2D(latitude: 40.7610599, longitude: -73.9750055)
         
         let targetStoreAnnotation2 = MKPointAnnotation()
-        targetStoreAnnotation2.title = "Also something"
+        targetStoreAnnotation2.title = "Target2"
         targetStoreAnnotation2.coordinate = CLLocationCoordinate2D(latitude: 40.7619047, longitude: -73.9668278)
         
         let targetStoreAnnotation3 = MKPointAnnotation()
-        targetStoreAnnotation3.title = "Also something"
+        targetStoreAnnotation3.title = "Target3"
         targetStoreAnnotation3.coordinate = CLLocationCoordinate2D(latitude: 40.7647647, longitude: -73.9660894)
         
         destinations.append(targetStoreAnnotation)
@@ -129,8 +139,8 @@ extension navMainViewController: CLLocationManagerDelegate{
         }
         
         let polyLineRenderer = MKPolylineRenderer(polyline: currentRoute.polyline)
-        polyLineRenderer.strokeColor = UIColor.orange
-        polyLineRenderer.lineWidth = 5
+        polyLineRenderer.strokeColor = UIColor.black
+        polyLineRenderer.lineWidth = 2
         return polyLineRenderer
     }
     
@@ -166,14 +176,19 @@ extension navMainViewController: MKMapViewDelegate{
         
         var pinImage:UIImage?
         if let title = annotation.title, title == "Best choice"{
-            pinImage = UIImage(named: "bestStore")
-        }else if let title = annotation.title, title == "Also something"{
-            pinImage = UIImage(named: "storeLoc")
-        }else if annotation === mapView.userLocation{
+            pinImage = UIImage(named: "TargetA")
+        }
+        else if let title = annotation.title, title == "Target2"{
+            pinImage = UIImage(named: "TargetB")
+        }
+        else if let title = annotation.title, title == "Target3"{
+            pinImage = UIImage(named: "TargetC")
+        }
+        else if annotation === mapView.userLocation{
             pinImage = UIImage(named: "Portrait") //show the user Profile
         }
         
-        let size = CGSize(width: 30, height: 30)
+        let size = CGSize(width: 44, height: 44)
         UIGraphicsBeginImageContext(size)
         pinImage!.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
         let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
