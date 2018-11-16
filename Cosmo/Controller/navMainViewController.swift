@@ -25,6 +25,8 @@ class navMainViewController: UIViewController {
     @IBOutlet weak var focusProductPriceLabel: UILabel!
     @IBOutlet weak var focusProductSubview: UIView!
     
+    @IBOutlet weak var goTestButton: UIButton!
+    
     
     
     override func viewDidLoad() {
@@ -43,6 +45,8 @@ class navMainViewController: UIViewController {
         focusProductSubview.layer.shadowColor = UIColor.lightGray.cgColor
         focusProductSubview.layer.shadowOffset = CGSize(width: 0, height: 0)
         focusProductSubview.layer.shadowOpacity = 0.8
+        
+        goTestButton.layer.cornerRadius = 6.0
     }
     
     private func configureLocationServices(){

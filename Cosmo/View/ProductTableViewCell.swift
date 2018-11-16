@@ -22,14 +22,14 @@ class ProductTableViewCell: UITableViewCell {
         productPriceLabel.text = "\(curProduct.capacity) oz. $\(curProduct.price)"
         
         //shadow
-        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowColor = UIColor.gray.cgColor
         self.layer.shadowOpacity = 0.4
-        self.layer.shadowOffset = CGSize.zero
-        self.layer.shouldRasterize = true
+        self.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+        self.layer.shadowRadius = 10.0 / 2
         self.clipsToBounds = false
         
-        
     }
+    
     
     override var frame: CGRect {
         get {
@@ -37,8 +37,11 @@ class ProductTableViewCell: UITableViewCell {
         }
         set (newFrame) {
             var frame =  newFrame
-            frame.origin.y += 10
-            frame.size.height -= 4 * 5
+            frame.origin.y += 8
+            frame.size.height -= 2 * 8
+            frame.origin.x += 10
+            frame.size.width -= 2 * 10
+            
             super.frame = frame
         }
     }
@@ -55,4 +58,27 @@ class ProductTableViewCell: UITableViewCell {
     }
     
 
+}
+
+extension CALayer {
+    func applySketchShadow(
+        color: UIColor = .black,
+        alpha: Float = 0.5,
+        x: CGFloat = 0,
+        y: CGFloat = 2,
+        blur: CGFloat = 4,
+        spread: CGFloat = 0)
+    {
+        shadowColor = color.cgColor
+        shadowOpacity = alpha
+        shadowOffset = CGSize(width: x, height: y)
+        shadowRadius = blur / 2.0
+        if spread == 0 {
+            shadowPath = nil
+        } else {
+            let dx = -spread
+            let rect = bounds.insetBy(dx: dx, dy: dx)
+            shadowPath = UIBezierPath(rect: rect).cgPath
+        }
+    }
 }

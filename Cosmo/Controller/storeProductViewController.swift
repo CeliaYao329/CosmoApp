@@ -18,6 +18,7 @@ class storeProductViewController: UIViewController {
     @IBOutlet weak var focusProductDescriptionLabel: UILabel!
     @IBOutlet weak var focusProductPriceLabel: UILabel!
     
+    @IBOutlet weak var leaveReviewButton: UIButton!
     @IBOutlet weak var shadowLayer: UIView!
     
 //    @IBOutlet weak var cellShadowLayer: UIView!
@@ -30,12 +31,14 @@ class storeProductViewController: UIViewController {
         // Do any additional setup after loading the view.
         products = fetchProducts()
         //shadow
-        shadowLayer.layer.shadowOpacity = 0.6
-        shadowLayer.layer.shadowColor = UIColor.lightGray.cgColor
-        shadowLayer.layer.shadowOffset = CGSize.zero
+        shadowLayer.layer.shadowOpacity = 0.4
+        shadowLayer.layer.shadowColor = UIColor.gray.cgColor
+        shadowLayer.layer.shadowRadius = 9.0 / 2
+        shadowLayer.layer.shadowOffset = CGSize(width: 0, height: 2.0)
         shadowLayer.layer.shadowPath = UIBezierPath(rect: shadowLayer.bounds).cgPath
         
-   
+        leaveReviewButton.layer.cornerRadius = 6.0
+        
         focusProductImageView.image = focusProduct.picture
         focusProductNameLabel.text = focusProduct.productName
         focusProductDescriptionLabel.text = focusProduct.description
