@@ -810,7 +810,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Tell us more!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hHe-dn-C9G">
-                                <rect key="frame" x="20" y="662" width="374" height="48"/>
+                                <rect key="frame" x="20" y="597" width="374" height="113"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -834,6 +834,7 @@
                         <outlet property="fillReviewProductName" destination="R6E-eh-kYk" id="QIY-Jl-mt8"/>
                         <outlet property="fillReviewProductPrice" destination="GlO-O2-5ho" id="9hQ-cI-fVz"/>
                         <outlet property="rateSubview" destination="bss-fO-fYA" id="QZp-oE-fhe"/>
+                        <outlet property="tagList" destination="qxj-UR-ym0" id="ncS-Kl-vpe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ja0-Qq-7fp" userLabel="First Responder" sceneMemberID="firstResponder"/>

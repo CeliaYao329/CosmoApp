@@ -8,8 +8,8 @@
 
 import UIKit
 import Cosmos
-
-class fillReviewViewController: UIViewController {
+import TagListView
+class fillReviewViewController: UIViewController, TagListViewDelegate {
     
     var reviewProduct : Product = Product(_productID: "1", _productName: "CHILI", _picture: "CHILI-MAC-lipstick", _description: "chilichilichili", _capacity: 2, _price: 12.2)
     
@@ -20,9 +20,8 @@ class fillReviewViewController: UIViewController {
     
     //rate stars
     @IBOutlet weak var rateSubview: UIView!
-    
-    @IBOutlet weak var fillTagCollectionView: UICollectionView!
 
+    @IBOutlet weak var tagList: TagListView!
     
     lazy var rateView: CosmosView = {
         var view = CosmosView()
@@ -32,6 +31,7 @@ class fillReviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         rateSubview.addSubview(rateView)
+        tagList.delegate = self
         
         fillReviewProductImage.image = reviewProduct.picture
         fillReviewProductName.text = reviewProduct.productName
@@ -39,6 +39,7 @@ class fillReviewViewController: UIViewController {
         fillReviewProductPrice.text = "\(reviewProduct.capacity) oz. $\(reviewProduct.price)"
         
         // Do any additional setup after loading the view.
+        configureTags()
     }
     
 
@@ -51,5 +52,12 @@ class fillReviewViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    func configureTags(){
+        tagList.textFont = UIFont.systemFont(ofSize: 24)
+        tagList.alignment = .center // possible values are .Left, .Center, and .Right
+        
+        tagList.addTags(["Bold", "True", "Sheer","Shine", "Satin", "Matte","Dry","Creamy","Oily"])
+                
+        tagList.setTitle("New Title", at:6) // to replace the title a tag
+    }
 }
