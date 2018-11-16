@@ -9,7 +9,7 @@
 import UIKit
 
 class productDetailViewController: UIViewController {
-    var displayProduct : Product = Product(_productID: "1", _productName: "CHILI", _picture: "CHILI-MAC-lipstick", _description: "chilichilichili", _capacity: 2, _price: 12.2)
+    var displayProduct : Product = Product(_productID: "product001", _productName: "PIGMENT: ROSE", _picture: "product001pic", _description: "A concentrated loose colour powder", _capacity: 15, _price: 22)
     
     var tags : [String]  = []
     
@@ -58,13 +58,16 @@ class productDetailViewController: UIViewController {
     func createReviewsAndTags(){
         tags = displayProduct.tags
         let fakereview = Review()
-        fakereview.note = "So, let's make a playground, because playgrounds are fun to work with and they hang almost every 2nd time of running your code on the mac."
+        fakereview.note = "What I love about the pigments is that they can be used for absolutely ANYTHING. You can mic them with other products or use them on their own for intense, bold colour. I use the Vanilla pigment to highlight the inner corners of my eyes and the brow bone. It's a very nice ivory shimmer. Just be careful as a tiny dab on the brush will go a long way. The colour intensity is nothing like I've every experienced!"
         fakereview.product = displayProduct
-        fakereview.rate = 4.9
-        fakereview.reviewer = User() //TODO -
+        fakereview.rate = 5
+        
+        //wishinglist is fake one
+        fakereview.reviewer = User(_userId: "user004", _userName: "tiayoon", _wishingList: [displayProduct], _recommendedList: [displayProduct], _longtitude: 40.702072, _latitude: -73.984126, _portrait: "user004pic") //TODO -
         fakereview.timestamp = NSDate() as Date
         reviews.append(fakereview)
     }
+    
 }
 
 extension productDetailViewController : UITableViewDelegate, UITableViewDataSource{

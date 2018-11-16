@@ -19,4 +19,15 @@ class User{
     var latitude: Double = 40.756670
     var portrait: String = "Portrait"
     var QRCode: UIImage = UIImage(named:"QRCode")!
+    
+    init(_userId: String, _userName: String, _wishingList: [Product], _recommendedList: [Product], _longtitude: Double, _latitude: Double, _portrait: String) {
+        userId = _userId
+        userName = _userName
+        wishingList = _wishingList
+        recommendedList = _recommendedList
+        longitude = _longtitude
+        latitude = _latitude
+        portrait = _portrait
+        
+    }
 }

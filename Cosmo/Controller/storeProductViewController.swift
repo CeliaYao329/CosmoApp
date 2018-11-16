@@ -10,7 +10,7 @@ import UIKit
 
 class storeProductViewController: UIViewController {
 
-    var focusProduct : Product = Product(_productID: "1", _productName: "CHILI", _picture: "CHILI-MAC-lipstick", _description: "chilichilichili", _capacity: 2, _price: 12.2)
+    var focusProduct : Product = Product(_productID: "product001", _productName: "PIGMENT: ROSE", _picture: "product001pic", _description: "A concentrated loose colour powder", _capacity: 15, _price: 22)
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var focusProductImageView: UIImageView!
@@ -58,15 +58,16 @@ class storeProductViewController: UIViewController {
 
     func fetchProducts() -> [Product]{
         var products : [Product] = []
-        let product1 = Product(_productID: "1", _productName: "CHILI", _picture: "CHILI-MAC-lipstick", _description: "chilichilichili", _capacity: 2, _price: 12.2)
-        let product2 = Product(_productID: "2", _productName: "Free", _picture: "Free-MAC-lipstick", _description: "freeme!!!!!", _capacity: 2, _price: 19.1)
-        let product3 = Product(_productID: "3", _productName: "Mediumrare", _picture: "Mediumrare-MAC-lipstick", _description: "medmedmedmsmhgjb", _capacity: 2, _price: 10.2)
+        let product1 = Product(_productID: "product002", _productName: "VERSICOLOUR VARNISH CREAM LIP STAIN", _picture: "product002pic", _description: "A glossy hybrid lip colour", _capacity: 28, _price: 22)
+        let product2 = Product(_productID: "product003", _productName: "FACE COMPACT: FAIR / SHINY PRETTY THINGS", _picture: "product003pic", _description: "A face compact. $63.50 value", _capacity: 49, _price: 39.5)
+        let product3 = Product(_productID: "product004", _productName: "MISCHIEF MINX PALETTE: WARM NEUTRAL", _picture: "product004pic", _description: "A palette of Eye Shadows and Highlighter", _capacity: 60, _price: 41)
         products.append(product1)
         products.append(product2)
         products.append(product3)
         
         return products
     }
+    
     @IBAction func editReviewPressed(_ sender: Any) {
         performSegue(withIdentifier: "fromStoreProductToFillReview", sender: nil)
     }

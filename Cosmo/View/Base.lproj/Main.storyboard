@@ -824,10 +824,8 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
-
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ov8-U7-dPF">
                                                     <rect key="frame" x="119" y="56" width="225" height="16"/>
-
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="Ehj-HY-JZN"/>
                                                     </constraints>
@@ -835,10 +833,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKO-sm-rRA">
                                                     <rect key="frame" x="119" y="76" width="225" height="16"/>
-
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="225" id="b0P-l2-c8G"/>
                                                         <constraint firstAttribute="height" constant="16" id="tjZ-YW-6ji"/>
@@ -967,7 +963,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jzn-Uj-7se">
-                                <rect key="frame" x="0.0" y="88" width="123" height="150"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="150"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6E-eh-kYk">
                                         <rect key="frame" x="156" y="16" width="200" height="41"/>
@@ -1044,9 +1040,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Al-b7-vC8">
-
-                                <rect key="frame" x="10" y="296" width="103" height="20"/>
-
+                                <rect key="frame" x="10" y="296" width="355" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="9Wp-BQ-BeD"/>
                                 </constraints>
@@ -1055,8 +1049,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="qxj-UR-ym0" customClass="TagListView" customModule="TagListView">
-
-                                <rect key="frame" x="10" y="324" width="103" height="36"/>
+                                <rect key="frame" x="10" y="324" width="355" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="wBK-Za-mVq"/>
@@ -1095,9 +1088,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finish" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIk-Ai-Gud">
-
-                                <rect key="frame" x="10" y="380" width="103" height="20"/>
-
+                                <rect key="frame" x="10" y="380" width="355" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Kxm-wa-3bI"/>
                                 </constraints>
@@ -1106,9 +1097,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bf5-sZ-JpX" customClass="TagListView" customModule="TagListView">
-
-                                <rect key="frame" x="10" y="408" width="103" height="36"/>
-
+                                <rect key="frame" x="10" y="408" width="355" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="KbI-Qk-Ce2"/>
@@ -1147,9 +1136,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texture" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6za-lU-f0B">
-
-                                <rect key="frame" x="10" y="452" width="103" height="20"/>
-
+                                <rect key="frame" x="10" y="452" width="355" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="YUu-cE-Qtl"/>
                                 </constraints>
@@ -1158,9 +1145,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ed9-qp-2m0" customClass="TagListView" customModule="TagListView">
-
-                                <rect key="frame" x="10" y="480" width="103" height="36"/>
-
+                                <rect key="frame" x="10" y="480" width="355" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="G6e-fQ-kO1"/>
@@ -1199,8 +1184,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Tell us more!" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hHe-dn-C9G">
-
-                                <rect key="frame" x="10" y="528" width="103" height="100"/>
+                                <rect key="frame" x="10" y="528" width="355" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="LAK-e0-IPC"/>
                                 </constraints>
@@ -1209,8 +1193,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqS-ea-fia">
-
-                                <rect key="frame" x="-222" y="636" width="335" height="60"/>
+                                <rect key="frame" x="30" y="636" width="335" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="335" id="4pR-Ad-G12"/>
@@ -1322,7 +1305,7 @@
         <image name="MyBag" width="79" height="87"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8zi-v1-UrV"/>
+        <segue reference="hIp-aB-J6B"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

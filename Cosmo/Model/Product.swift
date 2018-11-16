@@ -16,7 +16,7 @@ class Product{
     var description: String
     var capacity: Int
     var price: Float
-    var tags : [String] = ["Super moist", "Too expensize", "nice color"]
+    var tags : [String] = ["Bold", "Shine", "Dry"]
     var reviews : [Review] = []
     
     
