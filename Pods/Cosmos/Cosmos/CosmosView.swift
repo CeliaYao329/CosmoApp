@@ -345,6 +345,7 @@ Shows: ★★★★☆ (123)
   
   @IBInspectable var filledColor: UIColor = CosmosDefaultSettings.filledColor {
     didSet {
+        //i change
       settings.filledColor = filledColor
     }
   }
@@ -357,6 +358,7 @@ Shows: ★★★★☆ (123)
     
   @IBInspectable var emptyBorderColor: UIColor = CosmosDefaultSettings.emptyBorderColor {
       didSet {
+        //i change emptyBorderColor
           settings.emptyBorderColor = emptyBorderColor
       }
   }
@@ -369,6 +371,7 @@ Shows: ★★★★☆ (123)
   
   @IBInspectable var filledBorderColor: UIColor = CosmosDefaultSettings.filledBorderColor {
       didSet {
+        // i change
           settings.filledBorderColor = filledBorderColor
       }
   }
