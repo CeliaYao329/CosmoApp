@@ -63,9 +63,20 @@ class productDetailViewController: UIViewController {
         fakereview.rate = 5
         
         //wishinglist is fake one
-        fakereview.reviewer = User(_userId: "user004", _userName: "tiayoon", _wishingList: [displayProduct], _recommendedList: [displayProduct], _longtitude: 40.702072, _latitude: -73.984126, _portrait: "user004pic") //TODO -
+        fakereview.reviewer = User(_userId: "user004", _userName: "tiayoon", _wishingList: [displayProduct], _recommendedList: [displayProduct], _longtitude: 40.702072, _latitude: -73.984126, _portrait: "reviewer")
         fakereview.timestamp = NSDate() as Date
+        
+        let fakereview2 = Review()
+        fakereview2.note = "I've tried many full coverage liquid foundations but I found it's cakey and heavy on my face. This is my first time using a powder foundation but I love it. It's buildable, matte but still looks natural, oil-control and so smooth. I'll never try any other one. You got me MAC."
+        fakereview2.product = displayProduct
+        fakereview2.rate = 5
+        
+        //wishinglist is fake one
+        fakereview2.reviewer = User(_userId: "user004", _userName: "yanni", _wishingList: [displayProduct], _recommendedList: [displayProduct], _longtitude: 40.702072, _latitude: -73.984126, _portrait: "reviewer2")
+        fakereview2.timestamp = NSDate() as Date
+        
         reviews.append(fakereview)
+        reviews.append(fakereview2)
     }
     
 }

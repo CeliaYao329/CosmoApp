@@ -11,7 +11,7 @@ import MapKit
 
 class navMainViewController: UIViewController {
 
-    var focusProduct : Product = Product(_productID: "1", _productName: "CHILI LIPSTICK", _picture: "CHILI-MAC-lipstick", _description: "A concentrated loose colour powder", _capacity: 2, _price: 12.2)
+    var focusProduct : Product = Product(_productID: "product001", _productName: "PIGMENT: ROSE", _picture: "product001pic", _description: "A concentrated loose colour powder", _capacity: 15, _price: 22)
     
     private let locationManager = CLLocationManager()
     private var currentLocation: CLLocationCoordinate2D?
@@ -114,7 +114,9 @@ class navMainViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var takeMeThereButton: UIButton!
     @IBAction func gotoStoreProductView(_ sender: Any) {
+        takeMeThereButton.setTitle("I've arrived!", for: .selected) 
         performSegue(withIdentifier: "fromNavMainToQRCodeView", sender: nil)
     }
     

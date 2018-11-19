@@ -11,7 +11,7 @@ import Cosmos
 import TagListView
 class fillReviewViewController: UIViewController, TagListViewDelegate {
     
-    var reviewProduct : Product = Product(_productID: "1", _productName: "CHILI", _picture: "CHILI-MAC-lipstick", _description: "chilichilichili", _capacity: 2, _price: 12.2)
+    var reviewProduct : Product = Product(_productID: "product001", _productName: "PIGMENT: ROSE", _picture: "product001pic", _description: "A concentrated loose colour powder", _capacity: 15, _price: 22)
     
     @IBOutlet weak var fillReviewProductImage: UIImageView!
     @IBOutlet weak var fillReviewProductName: UILabel!
@@ -69,5 +69,8 @@ class fillReviewViewController: UIViewController, TagListViewDelegate {
         tagList3.addTags(["        Dry              ", "         Creamy          ", "          Oily           "])
         
         
+    }
+    @IBAction func reviewSubmitPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "formReivewToHomeView", sender: nil)
     }
 }

@@ -27,11 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         let content = UNMutableNotificationContent()
-        content.title = "Title"
-        content.body = "Body"
+        content.title = "Try your love!"
+        content.body = "The pigment you liked is only 5 minutes away!"
         content.sound = UNNotificationSound.default
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 6, repeats: false)
         let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)
         
         

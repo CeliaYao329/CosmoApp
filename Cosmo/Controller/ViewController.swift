@@ -61,11 +61,11 @@ class ViewController: UIViewController {
         targetStoreAnnotation.coordinate = CLLocationCoordinate2D(latitude: 40.7610599, longitude: -73.9750055)
         
         let targetStoreAnnotation2 = MKPointAnnotation()
-        targetStoreAnnotation2.title = "Also something"
+        targetStoreAnnotation2.title = "Target2"
         targetStoreAnnotation2.coordinate = CLLocationCoordinate2D(latitude: 40.7619047, longitude: -73.9668278)
         
         let targetStoreAnnotation3 = MKPointAnnotation()
-        targetStoreAnnotation3.title = "Also something"
+        targetStoreAnnotation3.title = "Target3"
         targetStoreAnnotation3.coordinate = CLLocationCoordinate2D(latitude: 40.7647647, longitude: -73.9660894)
         
         destinations.append(targetStoreAnnotation)
@@ -110,8 +110,8 @@ extension ViewController: CLLocationManagerDelegate{
         }
         
         let polyLineRenderer = MKPolylineRenderer(polyline: currentRoute.polyline)
-        polyLineRenderer.strokeColor = UIColor.orange
-        polyLineRenderer.lineWidth = 5
+        polyLineRenderer.strokeColor = UIColor.black
+        polyLineRenderer.lineWidth = 2
         return polyLineRenderer
     }
     
@@ -147,14 +147,18 @@ extension ViewController: MKMapViewDelegate{
         
         var pinImage:UIImage?
         if let title = annotation.title, title == "Best choice"{
-            pinImage = UIImage(named: "bestStore")
-        }else if let title = annotation.title, title == "Also something"{
-            pinImage = UIImage(named: "storeLoc")
-        }else if annotation === mapView.userLocation{
+            pinImage = UIImage(named: "TargetA")
+        }else if let title = annotation.title, title == "Target2"{
+            pinImage = UIImage(named: "TargetB")
+        }
+        else if let title = annotation.title, title == "Target3"{
+            pinImage = UIImage(named: "TargetC")
+        }
+        else if annotation === mapView.userLocation{
             pinImage = UIImage(named: "Portrait") //show the user Profile
         }
         
-        let size = CGSize(width: 30, height: 30)
+        let size = CGSize(width: 44, height: 44)
         UIGraphicsBeginImageContext(size)
         pinImage!.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
         let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
@@ -172,12 +176,17 @@ extension ViewController: MKMapViewDelegate{
     
     func fetchProducts() -> [Product]{
         var products : [Product] = []
-        let product1 = Product(_productID: "1", _productName: "CHILI", _picture: "CHILI-MAC-lipstick", _description: "chilichilichili", _capacity: 2, _price: 12.2)
-        let product2 = Product(_productID: "2", _productName: "Free", _picture: "Free-MAC-lipstick", _description: "freeme!!!!!", _capacity: 2, _price: 19.1)
-        let product3 = Product(_productID: "3", _productName: "Mediumrare", _picture: "Mediumrare-MAC-lipstick", _description: "medmedmedmsmhgjb", _capacity: 2, _price: 10.2)
+        let product1 = Product(_productID: "product001", _productName: "PIGMENT: ROSE", _picture: "product001pic", _description: "A concentrated loose colour powder", _capacity: 15, _price: 22)
+        let product2 = Product(_productID: "product002", _productName: "VERSICOLOUR VARNISH CREAM LIP STAIN", _picture: "product002pic", _description: "A glossy hybrid lip colour", _capacity: 28, _price: 22)
+        let product3 = Product(_productID: "product003", _productName: "FACE COMPACT: FAIR / SHINY PRETTY THINGS", _picture: "product003pic", _description: "A face compact. $63.50 value", _capacity: 49, _price: 39.5)
+        let product4 = Product(_productID: "product004", _productName: "MISCHIEF MINX PALETTE: WARM NEUTRAL", _picture: "product004pic", _description: "A palette of Eye Shadows and Highlighter", _capacity: 60, _price: 41)
+        let product5 = Product(_productID: "product005", _productName: "MINERALIZE BLUSH: WARM SOUL", _picture: "product005pic", _description: "A blush without heavy coverage.", _capacity: 12, _price: 29)
+        
         products.append(product1)
         products.append(product2)
         products.append(product3)
+        products.append(product4)
+        products.append(product5)
         
         return products
     }
