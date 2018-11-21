@@ -9,7 +9,7 @@
 import UIKit
 import Cosmos
 import TagListView
-class fillReviewViewController: UIViewController, TagListViewDelegate {
+class fillReviewViewController: UIViewController, TagListViewDelegate, UITextFieldDelegate {
     
     var reviewProduct : Product = Product(_productID: "product001", _productName: "PIGMENT: ROSE", _picture: "product001pic", _description: "A concentrated loose colour powder", _capacity: 15, _price: 22)
     
@@ -24,6 +24,7 @@ class fillReviewViewController: UIViewController, TagListViewDelegate {
     @IBOutlet weak var tagList: TagListView!
     @IBOutlet weak var tagList2: TagListView!
     @IBOutlet weak var tagList3: TagListView!
+    @IBOutlet weak var paragraphTextField: UITextField!
     
     lazy var rateView: CosmosView = {
         var view = CosmosView()
@@ -36,6 +37,13 @@ class fillReviewViewController: UIViewController, TagListViewDelegate {
         tagList.delegate = self
         tagList2.delegate = self
         tagList3.delegate = self
+        paragraphTextField.delegate = self
+        
+        //listen for keyboard events
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
         
         fillReviewProductImage.image = reviewProduct.picture
         fillReviewProductName.text = reviewProduct.productName
@@ -46,6 +54,11 @@ class fillReviewViewController: UIViewController, TagListViewDelegate {
         configureTags()
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
 
     /*
     // MARK: - Navigation
@@ -64,13 +77,39 @@ class fillReviewViewController: UIViewController, TagListViewDelegate {
         tagList3.textFont = UIFont.systemFont(ofSize: 10)
         tagList3.alignment = .center
         
+        
         tagList.addTags(["      Bold               ", "         True            ", "          Sheer          "])
         tagList2.addTags(["      Shine              ", "         Satin           ", "          Matte          "])
         tagList3.addTags(["        Dry              ", "         Creamy          ", "          Oily           "])
         
         
     }
+    
+    @objc func keyboardWillChange(notification: Notification){
+        print("keyboard will show: \(notification.name.rawValue)")
+        view.frame.origin.y = -250
+    }
+
+    //UITextFieldDelegate Methods that we need to implement
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        paragraphTextField.resignFirstResponder()
+        view.frame.origin.y = 0
+        return true
+    }
+    
+    
     @IBAction func reviewSubmitPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "formReivewToHomeView", sender: nil)
+        let congratsController = UIAlertController(title: "Your present is waiting", message: "Thanks for your review", preferredStyle: .alert)
+        congratsController.addAction(UIAlertAction(title: "Back", style: .default, handler: { (action) in
+            self.performSegue(withIdentifier: "formReivewToHomeView", sender: nil)
+        }))
+        self.present(congratsController, animated: true, completion: nil)
+        //performSegue(withIdentifier: "formReivewToHomeView", sender: nil)
+    }
+
+    
+    func tagPressed(_ title: String, tagView: TagView, sender: TagListView) {
+        tagView.isSelected = true
     }
 }
+
