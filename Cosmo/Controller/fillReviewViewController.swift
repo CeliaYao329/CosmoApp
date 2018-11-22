@@ -26,6 +26,7 @@ class fillReviewViewController: UIViewController, TagListViewDelegate, UITextFie
     @IBOutlet weak var tagList3: TagListView!
     @IBOutlet weak var paragraphTextField: UITextField!
     
+    @IBOutlet weak var submitButton: UIButton!
     lazy var rateView: CosmosView = {
         var view = CosmosView()
         return view
@@ -38,6 +39,8 @@ class fillReviewViewController: UIViewController, TagListViewDelegate, UITextFie
         tagList2.delegate = self
         tagList3.delegate = self
         paragraphTextField.delegate = self
+        
+        submitButton.layer.cornerRadius = 6.0
         
         //listen for keyboard events
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)

@@ -1279,6 +1279,7 @@
                         <outlet property="fillReviewProductPrice" destination="GlO-O2-5ho" id="9hQ-cI-fVz"/>
                         <outlet property="paragraphTextField" destination="hHe-dn-C9G" id="gnU-Zl-KWW"/>
                         <outlet property="rateSubview" destination="bss-fO-fYA" id="QZp-oE-fhe"/>
+                        <outlet property="submitButton" destination="JqS-ea-fia" id="Eqd-jA-Ahk"/>
                         <outlet property="tagList" destination="qxj-UR-ym0" id="ncS-Kl-vpe"/>
                         <outlet property="tagList2" destination="Bf5-sZ-JpX" id="baY-FZ-dZ9"/>
                         <outlet property="tagList3" destination="ed9-qp-2m0" id="BgJ-xa-HVH"/>
@@ -1340,8 +1341,8 @@
         <image name="MyBag" width="79" height="87"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Hv9-mC-C8b"/>
-        <segue reference="8zi-v1-UrV"/>
+        <segue reference="a7J-JT-7vb"/>
+        <segue reference="hIp-aB-J6B"/>
         <segue reference="NPI-ka-4Oy"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
