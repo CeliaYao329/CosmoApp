@@ -8,10 +8,11 @@
 
 import UIKit
 import MapKit
+import Firebase
 
 class ViewController: UIViewController {
     
-    var products : [Product] = []
+    var products : [Product] = [Product]()
     private let locationManager = CLLocationManager()
     private var currentLocation: CLLocationCoordinate2D?
     
@@ -21,15 +22,18 @@ class ViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var mapView: MKMapView!
     
+    var db: Firestore!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        db = Firestore.firestore()
+        fetchProducts()
         // Do any additional setup after loading the view, typically from a nib.
         collectionView.delegate = self
         collectionView.dataSource = self
+        
         configureLocationServices()
         mapView.delegate = self
-        
-        products = fetchProducts()
     }
     
     private func configureLocationServices(){
@@ -174,21 +178,28 @@ extension ViewController: MKMapViewDelegate{
         print("select annotation: \(String(describing: view.annotation?.title))")
     }
     
-    func fetchProducts() -> [Product]{
-        var products : [Product] = []
-        let product1 = Product(_productID: "product001", _productName: "PIGMENT: ROSE", _picture: "product001pic", _description: "A concentrated loose colour powder", _capacity: 15, _price: 22)
-        let product2 = Product(_productID: "product002", _productName: "VERSICOLOUR VARNISH CREAM LIP STAIN", _picture: "product002pic", _description: "A glossy hybrid lip colour", _capacity: 28, _price: 22)
-        let product3 = Product(_productID: "product003", _productName: "FACE COMPACT: FAIR / SHINY PRETTY THINGS", _picture: "product003pic", _description: "A face compact. $63.50 value", _capacity: 49, _price: 39.5)
-        let product4 = Product(_productID: "product004", _productName: "MISCHIEF MINX PALETTE: WARM NEUTRAL", _picture: "product004pic", _description: "A palette of Eye Shadows and Highlighter", _capacity: 60, _price: 41)
-        let product5 = Product(_productID: "product005", _productName: "MINERALIZE BLUSH: WARM SOUL", _picture: "product005pic", _description: "A blush without heavy coverage.", _capacity: 12, _price: 29)
+//    func fetchProducts() -> [Product]{
+    func fetchProducts() {
+        db.collection("products").getDocuments { (snapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in snapshot!.documents {
+                    let productID = document.data()["product_id"] as! String
+                    let productName = document.data()["product_name"] as! String
+                    let picture = productID + "pic"
+                    let capacity = (document.data()["capacity"] as! NSNumber).intValue
+                    let price = (document.data()["capacity"] as! NSNumber).floatValue
+                    let description = document.data()["description"] as! String
+                    print("receive product: \(productID), \(productName), \(picture)")
+                    let product = Product(_productID: productID, _productName: productName, _picture: picture, _description: description, _capacity: capacity, _price: price)
+                    self.products.append(product)
+                    self.collectionView?.reloadData()
+                }
+            }
+        }
         
-        products.append(product1)
-        products.append(product2)
-        products.append(product3)
-        products.append(product4)
-        products.append(product5)
-        
-        return products
+       
     }
 }
 
